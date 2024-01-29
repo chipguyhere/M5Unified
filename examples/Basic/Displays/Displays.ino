@@ -3,43 +3,42 @@
 
 #include <Arduino.h>
 
-// If you use SD card, write this.
+// To be able to read image files from SD card, include this.
 #include <SD.h>
 
-// If you use SPIFFS, write this.
+// To be able to read image files from ESP32 built-in memory (SPIFFS), include this.
 #include <SPIFFS.h>
 
 #endif
 
 // * The filesystem header must be included before the display library.
-
 //----------------------------------------------------------------
 
-// If you use ATOM Display, write this.
+// If you are using the ATOM Display as your display, uncomment this.
 #include <M5AtomDisplay.h>
 
-// If you use Module Display, write this.
+// If you are using the ATOM HDMI Display Module as your display, uncomment this.
 #include <M5ModuleDisplay.h>
 
-// If you use Module RCA, write this.
+// If you are using the RCA Display stackable module as your display, uncomment this.
 #include <M5ModuleRCA.h>
 
-// If you use Unit GLASS, write this.
+// If you are using the Unit Glass OLED display as your display, uncomment this.
 #include <M5UnitGLASS.h>
 
-// If you use Unit GLASS2, write this.
+// If you are using the Unit Glass2 OLED display as your display, uncomment this.
 #include <M5UnitGLASS2.h>
 
-// If you use Unit OLED, write this.
+// If you are using the "Unit OLED" display as your display, uncomment this.
 #include <M5UnitOLED.h>
 
-// If you use Unit Mini OLED, write this.
+// If you are using the "Unit Mini OLED" display as your display, uncomment this.
 #include <M5UnitMiniOLED.h>
 
-// If you use Unit LCD, write this.
+// If you are using the "Unit LCD" display as your display, uncomment this.
 #include <M5UnitLCD.h>
 
-// If you use UnitRCA (for Video output), write this.
+// If you are using the "Unit RCA" accessory as your display (connected via 4-pin cable), uncomment this.
 #include <M5UnitRCA.h>
 
 // * The display header must be included before the M5Unified library.
@@ -88,7 +87,7 @@ void setup(void)
 
 
 // Set individual parameters for external displays.
-// (※ Use only the items you wish to change. Basically, it can be omitted.)
+// (※ Uncomment only the items you wish to change from defaults.)
 #if defined ( __M5GFX_M5ATOMDISPLAY__ ) // setting for ATOM Display.
 // cfg.atom_display.logical_width  = 1280;
 // cfg.atom_display.logical_height = 720;
@@ -271,7 +270,7 @@ void loop(void)
   }
 }
 
-// for ESP-IDF compat
+// for ESP-IDF compatibility
 #if !defined ( ARDUINO ) && defined ( ESP_PLATFORM )
 extern "C" {
   void loopTask(void*)
