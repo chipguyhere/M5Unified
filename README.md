@@ -25,6 +25,7 @@ In the Arduino IDE, once the M5Unified library is installed through Library Mana
 
 ##### Separate examples
 - **Displays:** A basic demonstration of printing text on each of the supported M5Stack displays is in [Displays](examples/Basic/Displays/Displays.ino).
+  Several examples of using the graphics library can be found with the examples of the M5GFX library.
 - **Buttons:** A demo of detecting and responding to button presses is in [Button](examples/Basic/Button/Button.ino).
 - **Touch:** A demo of detecting and reacting to touch events is in [Touch](examples/Basic/Touch/Touch.ino).
 - **Speaker:** An example of playing wave audio through built-in speakers and accessories that support audio is in [Speaker](examples/Basic/Speaker/Speaker.ino)
